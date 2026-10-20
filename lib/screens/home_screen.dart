@@ -34,9 +34,6 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 FilledButton(
-                  // go заменяет текущий адрес (переход по ссылке),
-                  // а не кладёт экран поверх — поэтому кнопка
-                  // «назад» браузера работает корректно.
                   onPressed: () => context.go('/calculator'),
                   child: const Text('Калькулятор'),
                 ),

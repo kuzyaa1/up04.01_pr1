@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-/// Универсальный экран результата.
-///
-/// Получает данные только из адреса (через параметры, переданные
-/// из router.dart) и потому корректно работает при прямом открытии
-/// ссылки в новой вкладке. При испорченных параметрах показывает
-/// понятную ошибку вместо пустого экрана или исключения.
 class ResultScreen extends StatelessWidget {
   final String title;
   final String expression;

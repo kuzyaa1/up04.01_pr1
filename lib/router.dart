@@ -9,14 +9,6 @@ import 'screens/home_screen.dart';
 import 'screens/not_found_screen.dart';
 import 'screens/result_screen.dart';
 
-/// Схема маршрутов приложения.
-///
-/// /                     — главная с кнопками перехода
-/// /calculator           — форма калькулятора
-/// /calculator/result    — результат; данные только из query-параметров
-/// /converter            — форма конвертера
-/// /converter/result     — результат; данные только из query-параметров
-/// всё остальное         — экран 404 через errorBuilder
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
@@ -97,7 +89,6 @@ final appRouter = GoRouter(
     ),
   ],
   // Аналог страницы 404: сюда попадают все неизвестные адреса,
-  // например /qwerty.
   errorBuilder: (context, state) =>
       NotFoundScreen(location: state.uri.toString()),
 );

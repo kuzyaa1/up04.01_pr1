@@ -37,10 +37,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     final a = _aController.text.trim().replaceAll(',', '.');
     final b = _bController.text.trim().replaceAll(',', '.');
 
-    // Аналог redirect после @PostMapping:
-    // данные уходят в адрес, а расчёт выполняет экран результата.
-    // Uri.encodeComponent обязателен: '+' в строке запроса без
-    // кодирования превратится в пробел.
     context.go(
       '/calculator/result?a=${Uri.encodeComponent(a)}'
       '&op=${Uri.encodeComponent(_operation)}'

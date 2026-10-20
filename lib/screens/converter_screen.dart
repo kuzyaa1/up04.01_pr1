@@ -5,9 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../logic/currency.dart';
 
 /// Экран конвертера валют.
-///
 /// Запоминает последнюю выбранную пару валют в SharedPreferences
-/// (на web это localStorage) и восстанавливает её при открытии.
 class ConverterScreen extends StatefulWidget {
   const ConverterScreen({super.key});
 
